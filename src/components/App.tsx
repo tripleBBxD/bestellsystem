@@ -8,20 +8,14 @@ function App() {
 
   return (
     <>
-      <h1 className=''>Vite</h1>
-      <div className='flex'>
-        <div className='w-9/12 bg-gray-500'>
+
+      <div className='flex bg-blue-500'>
+        <div className='w-9/12 p-4'>
           <AllProducts />
         </div>
-        <div className='w-3/12 bg-blue-400'>
+        <div className='w-3/12 bg-blue-700 p-4 rounded-l-2xl'>
           <SelectedProducts />
         </div>
-      </div>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)} className=''>
-          count is {count}
-        </button>
       </div>
 
     </>
