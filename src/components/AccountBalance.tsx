@@ -1,9 +1,16 @@
+type AccountBalanceProps = {
+  balance: number
+}
+
 function AccountBalance(
+  {balance}: AccountBalanceProps
 ) {
 
   return (
     <>
-    <h1></h1>
+      <p className="bg-white rounded-lg p-4">
+        {balance}€
+      </p>
     </>
   )
 }

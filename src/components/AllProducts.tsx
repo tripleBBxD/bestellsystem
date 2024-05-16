@@ -5,7 +5,7 @@ function AllProducts(
 ) {
   
   return (
-    <div className="grid grid-cols-3 gap-4 justify-items-center">
+    <div className="grid grid-cols-3 gap-4 justify-items-center relative">
         <Product price={3} name={"1"} productImage={viteLogo}/>
         <Product price={3} name={"2"} productImage={viteLogo}/>
         <Product price={3} name={"3"} productImage={viteLogo}/>
