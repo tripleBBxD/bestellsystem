@@ -1,9 +1,19 @@
-function CheckoutButton(
-) {
+import AccountBalance from "./AccountBalance"
 
+type CheckoutParams = {
+  onCheckout: () => void
+}
+
+function CheckoutButton(
+{
+  onCheckout
+}: CheckoutParams
+) 
+{
   return (
-  <>
-    <button className='text-lg object-right rounded-lg text-blue-500 bg-white p-4 shadow duration-150 hover:scale-105 hover:shadow-md'>
+    
+  <> 
+    <button type="button" onClick={onCheckout} className='text-lg object-right rounded-lg text-blue-500 bg-white p-4 shadow duration-150 hover:scale-105 hover:shadow-md'>
       Checkout
     </button>
   </>

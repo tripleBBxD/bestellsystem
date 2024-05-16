@@ -5,11 +5,10 @@ type AccountBalanceProps = {
 function AccountBalance(
   {balance}: AccountBalanceProps
 ) {
-
   return (
     <>
       <p className="bg-white rounded-lg p-4">
-        {balance}€
+        Balance: {balance}€
       </p>
     </>
   )

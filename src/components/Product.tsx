@@ -6,8 +6,6 @@ type ProductProps = {
     name: string
 }
 
-
-
 function Product(
     {price, name, productImage}: ProductProps
 ) {
