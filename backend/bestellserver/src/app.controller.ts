@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
-import { AppService, ProductDTO } from './app.service';
+import { AppService, ProductDTO, UsersDTO } from './app.service';
 
 @Controller()
 export class AppController {
@@ -14,5 +14,10 @@ export class AppController {
   async postProduct(@Body() productDTO: ProductDTO): Promise<string> {
     const insertedProduct = await this.appService.insertProduct(productDTO)
     return JSON.stringify(insertedProduct)
+  }
+
+  @Get("users")
+  async getUsersData(): Promise<UserDTO[]> {
+    return await
   }
 }

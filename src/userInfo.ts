@@ -1,4 +1,4 @@
 export type UserInfo = {
-    name: string
+    userName: string
     balance: number
 }

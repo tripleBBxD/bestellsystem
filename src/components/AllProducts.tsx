@@ -5,16 +5,18 @@ import axios  from "axios"
 
 type AllProductsProps = {
   productInfo: productInfo[]
+  cart: string[]
+  setCart: (strings: string[]) => void
 }
 
-function AllProducts({productInfo}: AllProductsProps 
+function AllProducts({productInfo, cart, setCart}: AllProductsProps 
 ){
 
   
 
   const products: productInfo[] = productInfo
   const allProducts = () => { return products.map((product) => {
-    return <Product price={product.price} name={product.productName} productImage={product.img}/>
+    return <Product price={product.price} name={product.productName} productImage={product.img} id={product.id} cart={cart} setCart={setCart}/>
   })}
 
   return (
