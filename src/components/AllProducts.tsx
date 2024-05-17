@@ -1,43 +1,22 @@
 import Product from "./Product"
 import { productInfo } from "../productInfo"
+import { useEffect } from "react"
+import axios  from "axios"
 
-function AllProducts(
-) {
-  const products: productInfo[] = [
-    {
-      "id": "1",
-      "name": "Fritz Kola",
-      "price": 0,
-      "img": "https://viel-durst.de/media/image/d2/1c/e1/Fritz-Kola-Kiste-24x0_33l-Glas-Flaschen-quer-Ki-Fl-Li-2022-01-21.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Fritz Kola",
-      "price": 0,
-      "img": "https://viel-durst.de/media/image/d2/1c/e1/Fritz-Kola-Kiste-24x0_33l-Glas-Flaschen-quer-Ki-Fl-Li-2022-01-21.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Fritz Kola",
-      "price": 0,
-      "img": "https://viel-durst.de/media/image/d2/1c/e1/Fritz-Kola-Kiste-24x0_33l-Glas-Flaschen-quer-Ki-Fl-Li-2022-01-21.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Fritz Kola",
-      "price": 0,
-      "img": "https://viel-durst.de/media/image/d2/1c/e1/Fritz-Kola-Kiste-24x0_33l-Glas-Flaschen-quer-Ki-Fl-Li-2022-01-21.jpg"
-    },
-    {
-      "id": "1",
-      "name": "Fritz Kola",
-      "price": 0,
-      "img": "https://viel-durst.de/media/image/d2/1c/e1/Fritz-Kola-Kiste-24x0_33l-Glas-Flaschen-quer-Ki-Fl-Li-2022-01-21.jpg"
-    },
-  ]
+type AllProductsProps = {
+  productInfo: productInfo[]
+}
+
+function AllProducts({productInfo}: AllProductsProps 
+){
+
+  
+
+  const products: productInfo[] = productInfo
   const allProducts = () => { return products.map((product) => {
-    return <Product price={product.price} name={product.name} productImage={product.img}/>
+    return <Product price={product.price} name={product.productName} productImage={product.img}/>
   })}
+
   return (
     <div className="grid grid-cols-3 gap-4 justify-items-center relative">
         {allProducts()}

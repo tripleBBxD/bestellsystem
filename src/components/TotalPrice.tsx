@@ -2,7 +2,7 @@ type TotalPriceProps = {
   price: number
 }
 
-function ProductImage( {
+function TotalPrice( {
   price
 }: TotalPriceProps
 
@@ -17,4 +17,4 @@ function ProductImage( {
   )
 }
 
-export default ProductImage
+export default TotalPrice

@@ -1,13 +1,13 @@
 import AccountBalance from "./AccountBalance"
 
-type CheckoutParams = {
+type CheckoutProps = {
   onCheckout: () => void
 }
 
 function CheckoutButton(
 {
   onCheckout
-}: CheckoutParams
+}: CheckoutProps
 ) 
 {
   return (

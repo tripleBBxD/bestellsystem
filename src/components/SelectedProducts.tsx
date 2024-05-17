@@ -8,7 +8,7 @@ function SelectedProducts(
 
   return (
     <>
-    <div className="grid grid-cols-1 gap-4 justify-items-center overflow-y-scroll">
+    <div className="grid grid-cols-1 gap-4 justify-items-center overflow-y-auto">
     <Product price={3} name={"1"} productImage={viteLogo}/>
     <Product price={3} name={"1"} productImage={viteLogo}/>
     <Product price={3} name={"1"} productImage={viteLogo}/>
