@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
-import { AppService, ProductDTO, UsersDTO } from './app.service';
+import { AppService, ProductDTO, UserDTO } from './app.service';
 
 @Controller()
 export class AppController {
@@ -18,6 +18,6 @@ export class AppController {
 
   @Get("users")
   async getUsersData(): Promise<UserDTO[]> {
-    return await
+    return await []
   }
 }

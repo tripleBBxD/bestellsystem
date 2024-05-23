@@ -5,7 +5,16 @@ meta {
 }
 
 post {
-  url: localhost:3000/product
-  body: none
+  url: http://localhost:3000/product
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "id": "2",
+    "productName": "Paulaner Spezi",
+    "price": 1.5,
+    "img": "https://www.paulaner.de/content/5-de/1-produkte/6-spezi/1-spezi/modules/1-product_intro-txgll2/bottle-nat-1000x1550-spezi.png"
+  }
 }

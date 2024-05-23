@@ -1,5 +1,8 @@
+import { Dispatch, SetStateAction } from "react"
+
 type TotalPriceProps = {
   price: number
+  setPrice: Dispatch<SetStateAction<number>>
 }
 
 function TotalPrice( {

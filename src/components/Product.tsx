@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react"
 
 
 type ProductProps = {
@@ -6,7 +7,7 @@ type ProductProps = {
     price: number
     name: string
     cart: string[]
-    setCart: (strings: string[]) => void
+    setCart: Dispatch<SetStateAction<string[]>>
 }
 
 function Product(

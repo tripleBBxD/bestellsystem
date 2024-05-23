@@ -17,13 +17,14 @@ export type ProductDTO = {
 export type UserDTO = {
   id: string,
   userName: string,
+  cart: string[],
   balance: number
 }
 
 @Injectable()
 export class AppService {
   
-  constructor(@InjectModel(Product.name) private productModel: Model<Product, @InjectModel(User.name) private userModel: Model<Product>) {}
+  constructor(@InjectModel(Product.name) private productModel: Model<Product>, @InjectModel(User.name) private userModel: Model<User>) {}
 
   getProducts(): Promise<Product[]> {
     return this.productModel.find().exec()
