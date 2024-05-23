@@ -1,0 +1,22 @@
+meta {
+  name: Set Balance
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3000/set-balance/0
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "newBalance": 50
+  }
+}
+
+vars:pre-request {
+  id: 664f412f4348330a5df7482a
+  newBalance: 120
+}

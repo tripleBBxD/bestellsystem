@@ -1,12 +1,7 @@
 import AllProducts from './AllProducts'
 import SelectedProducts from './SelectedProducts'
-import CheckoutButton from './CheckoutButton'
-import AccountBalance from './AccountBalance'
 import { useState } from 'react'
-import TotalPrice from './TotalPrice'
 import { ProductInfo } from '../productInfo'
-import Menu from './Menu.tsx'
-
 import { useEffect } from 'react'
 import axios from "axios"
 

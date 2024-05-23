@@ -1,4 +1,3 @@
-import AccountBalance from "./AccountBalance"
 
 type CheckoutProps = {
   onCheckout: () => void

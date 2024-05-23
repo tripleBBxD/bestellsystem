@@ -1,10 +1,17 @@
-function Menu(
-  ) {
-    return (
-      <>
-        <button className="p-4 bg-white text-lg rounded-lg">≡</button>
-      </>
-    )
-  }
+type MenuProps = {
   
-  export default Menu
+}
+
+function Menu(
+  {
+  
+  }: MenuProps
+) {
+  return (
+    <div className="bg-slate-600 rounded-lg">
+        <h1>test</h1>
+    </div>
+  )
+}
+
+export default Menu

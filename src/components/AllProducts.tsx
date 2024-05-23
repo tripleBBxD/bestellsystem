@@ -1,8 +1,6 @@
 import Product from "./Product"
 import { ProductInfo } from "../productInfo"
-import { Dispatch, SetStateAction, useEffect } from "react"
-import axios  from "axios"
-
+import { Dispatch, SetStateAction} from "react"
 type AllProductsProps = {
   productsData: ProductInfo[]
   cart: string[]

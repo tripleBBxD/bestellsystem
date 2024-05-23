@@ -5,6 +5,7 @@ import { Model } from 'mongoose';
 import { inherits } from 'util';
 import { privateDecrypt } from 'crypto';
 import { User } from './schemas/users.schema';
+import { ObjectId } from 'mongoose';
 
 
 export type ProductDTO = {
@@ -21,22 +22,35 @@ export type UserDTO = {
   balance: number
 }
 
+export type BalanceDTO = {
+  newBalance: number
+}
+
 @Injectable()
 export class AppService {
   
   constructor(@InjectModel(Product.name) private productModel: Model<Product>, @InjectModel(User.name) private userModel: Model<User>) {}
 
-  getProducts(): Promise<Product[]> {
+  dbGetProducts(): Promise<Product[]> {
     return this.productModel.find().exec()
   }
 
-  insertProduct(productDTO: ProductDTO): Promise<Product> {
+  dbInsertProduct(productDTO: ProductDTO): Promise<Product> {
     const newProduct = new this.productModel(productDTO)
     return newProduct.save()
   }
 
 
-  getUsers(): Promise<User[]> {
+  dbGetUsers(): Promise<User[]> {
     return this.userModel.find().exec()
+  }
+
+  dbSetBalance(id:string, balanceInfo :BalanceDTO): Promise<object>{
+    console.log(id)
+    console.log(balanceInfo.newBalance)
+    return this.userModel.updateOne(
+      {id:id},
+      {balance:balanceInfo.newBalance}
+    )
   }
 }

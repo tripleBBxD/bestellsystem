@@ -14,6 +14,8 @@ export class User {
     @Prop()
     balance: number
 
+    @Prop()
+    cart: string[]
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)
