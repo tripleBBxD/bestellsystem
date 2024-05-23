@@ -10,11 +10,25 @@ post {
   auth: none
 }
 
+query {
+  : 
+  : 
+  : 
+  : 
+}
+
 body:json {
   {
-    "id": "2",
-    "productName": "Paulaner Spezi",
-    "price": 1.5,
-    "img": "https://www.paulaner.de/content/5-de/1-produkte/6-spezi/1-spezi/modules/1-product_intro-txgll2/bottle-nat-1000x1550-spezi.png"
+    "id":"{{id}}",
+    "productName": "{{productName}}",
+    "price": {{price}},
+    "img": "{{img}}"
   }
+}
+
+vars:pre-request {
+  id: 4
+  productName: Ginger Ale
+  price: 3.5
+  img: https://www.hoffmannbringts.de/media/catalog/product/cache/a8f9ab97f2849be65f826d15a5c84584/1/0/103808-6-0_57173.jpg
 }
