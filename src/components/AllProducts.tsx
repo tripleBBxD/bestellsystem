@@ -1,20 +1,20 @@
 import Product from "./Product"
-import { productInfo } from "../productInfo"
+import { ProductInfo } from "../productInfo"
 import { Dispatch, SetStateAction, useEffect } from "react"
 import axios  from "axios"
 
 type AllProductsProps = {
-  productInfo: productInfo[]
+  productsData: ProductInfo[]
   cart: string[]
   setCart: Dispatch<SetStateAction<string[]>>
 }
 
-function AllProducts({productInfo, cart, setCart}: AllProductsProps 
+function AllProducts({productsData: productInfo, cart, setCart}: AllProductsProps 
 ){
 
   
 
-  const products: productInfo[] = productInfo
+  const products: ProductInfo[] = productInfo
   const allProducts = () => { return products.map((product, index) => {
     return <Product key={`all-products-${index}`} price={product.price} name={product.productName} productImage={product.img} id={product.id} cart={cart} setCart={setCart}/>
   })}
